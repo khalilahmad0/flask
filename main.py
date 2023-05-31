@@ -2392,7 +2392,8 @@ def send_email(employee):
                    'mohamad.khattab@wearelayer.com',
                    'mohammad.hammoud@wearelayer.com',
                    'jad.doueiri@wearelayer.com',
-                   'wajihelkaterji@gmail.com']
+                   'wajihelkaterji@gmail.com',
+                   'zeinab.hussein@wearelayer.com']
     to_address = ['khalil.ahmad@wearelayer.com']
     password = os.getenv('EMAIL_PASSWORD')
 
