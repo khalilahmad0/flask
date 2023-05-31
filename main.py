@@ -10,38 +10,9 @@ from email.mime.text import MIMEText
 from email import encoders
 
 app = Flask(__name__)
-current_employee_count = 81  # Initial count
+current_employee_count = 80  # Initial count
 last_employee = None  # Record of last employee who left
 employees = [
-            {
-            "firstName": "Test",
-            "lastName": "User",
-            "prefName": None,
-            "jobTitle": "DPA Engineer",
-            "department": "DPA",
-            "directReports": [],
-            "division": "Ubanquity SAL Offshore",
-            "email": "tarek.ramia@wearelayer.com",
-            "location": "Lebanon",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/202-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+96176902776",
-            "id": 203,
-            "linkedInUrl": "https://www.linkedin.com/in/tarek-abi-ramia-81bb6b202/",
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": None
-        },
         {
             "firstName": "Tarek",
             "lastName": "Abi Ramia",
