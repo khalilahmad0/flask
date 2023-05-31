@@ -2379,7 +2379,7 @@ def check_employee_count():
                     send_email(emp)
                     employees = data['employees']
                     break
-        time.sleep(5*60)  # wait for 5 minutes
+        time.sleep(15*60)  # wait for 5 minutes
         
 
 def send_email(employee):
