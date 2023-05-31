@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 from email import encoders
 
 app = Flask(__name__)
-current_employee_count = 80  # Initial count
+current_employee_count = 76  # Initial count
 last_employee = None  # Record of last employee who left
 employees = [
         {
@@ -505,35 +505,6 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": "Europe/Moscow"
-        },
-        {
-            "firstName": "Gizem",
-            "lastName": "Çetin",
-            "prefName": "Gizem",
-            "jobTitle": "Mobile Developer",
-            "department": "Frontend Engineering",
-            "directReports": [],
-            "division": "Layer Digital Solutions,  Ltd",
-            "email": "gizem.cetin@wearelayer.com",
-            "location": "Worldwide",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/226-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+905339733350",
-            "id": 226,
-            "linkedInUrl": "www.linkedin.com/in/gizemececetin",
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": None
         },
         {
             "firstName": "Mohammad",
@@ -1114,35 +1085,6 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": None
-        },
-        {
-            "firstName": "Marwa",
-            "lastName": "Karaki",
-            "prefName": None,
-            "jobTitle": "Mobile Developer",
-            "department": "Frontend Engineering",
-            "directReports": [],
-            "division": "Ubanquity SAL Offshore",
-            "email": "marwa.karaki@wearelayer.com",
-            "location": "Beirut, Lebanon",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/190-2-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+96170012097",
-            "id": 190,
-            "linkedInUrl": "https://www.linkedin.com/in/marwa-karaki-0a9826187/",
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": "Europe/Bucharest"
         },
         {
             "firstName": "Ahmad",
@@ -1899,35 +1841,6 @@ employees = [
             "timezone": None
         },
         {
-            "firstName": "Mohammad",
-            "lastName": "Shokor",
-            "prefName": None,
-            "jobTitle": "Support Engineer",
-            "department": "Support",
-            "directReports": [],
-            "division": "Layer Digital Solutions,  Ltd",
-            "email": "mohammad.shokor@wearelayer.com",
-            "location": "Beirut, Lebanon",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/257-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+96171220826",
-            "id": 257,
-            "linkedInUrl": None,
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": "Europe/Bucharest"
-        },
-        {
             "firstName": "Eduardo",
             "lastName": "Silveira",
             "prefName": None,
@@ -2042,35 +1955,6 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": "Europe/Brussels"
-        },
-        {
-            "firstName": "Daniel",
-            "lastName": "Tilsed",
-            "prefName": "Dan",
-            "jobTitle": "Business Analyst",
-            "department": "Client Delivery",
-            "directReports": [],
-            "division": "Layer Digital Solutions,  Ltd",
-            "email": "daniel.tilsed@wearelayer.com",
-            "location": "Dublin, Ireland",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/233-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+353872074078",
-            "id": 233,
-            "linkedInUrl": "https://www.linkedin.com/in/daniel-tilsed-a1bb1138/",
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": "Europe/Lisbon"
         },
         {
             "firstName": "Grzegorz",
@@ -2369,13 +2253,14 @@ def check_employee_count():
         print("Checking employee count")
         print(f"Current count: {current_employee_count}")
         print(f"New count: {len(data['employees'])}")
-        current_employee_count = len(data['employees'])
         if len(data['employees']) < current_employee_count:
             print("Employee left")
             for emp in employees:
-                if emp['firstName'] not in [e['firstName'] for e in data['employees']]:
+                if emp['firstName'] not in [e['firstName'] for e in data['employees']] and emp['lastName'] not in [e['lastName'] for e in data['employees']]:
                     print(f"Last employee who left: {emp['firstName']}, position: {emp['jobTitle']}")
                     last_employee = emp['firstName'] + " " + emp['lastName']
+                    current_employee_count = len(data['employees'])
+                    print("Sending email")
                     send_email(emp)
                     employees = data['employees']
                     break
@@ -2384,7 +2269,7 @@ def check_employee_count():
 
 def send_email(employee):
     from_address = 'khalil.ibr.ahmad@gmail.com'
-    bcc_address = ['khalil.ahmad@wearelayer.com', 
+    bcc_address = ['khalil.ahmad@wearelayer.com',
                    'mohamad.rahhal@wearelayer.com', 
                    'rodrigue.rizk@wearelayer.com', 
                    'sami.kanafani@wearelayer.com', 
@@ -2414,11 +2299,12 @@ def send_email(employee):
     # mime_base.add_header('Content-Disposition', "attachment; filename= name.mp3")
 
     # msg.attach(mime_base)
-
+    print("Sending email")
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(from_address, password)
     server.send_message(msg)
+    print("Email sent")
     server.quit()
 
 @app.route('/')
