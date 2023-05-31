@@ -2369,6 +2369,7 @@ def check_employee_count():
         print("Checking employee count")
         print(f"Current count: {current_employee_count}")
         print(f"New count: {len(data['employees'])}")
+        current_employee_count = len(data['employees'])
         if len(data['employees']) < current_employee_count:
             print("Employee left")
             for emp in employees:
@@ -2376,7 +2377,6 @@ def check_employee_count():
                     print(f"Last employee who left: {emp['firstName']}, position: {emp['jobTitle']}")
                     last_employee = emp['firstName'] + " " + emp['lastName']
                     send_email(emp)
-                    current_employee_count = len(data['employees'])
                     employees = data['employees']
                     break
         time.sleep(5*60)  # wait for 5 minutes
@@ -2384,7 +2384,15 @@ def check_employee_count():
 
 def send_email(employee):
     from_address = 'khalil.ibr.ahmad@gmail.com'
-    bcc_address = ['khalil.ahmad@wearelayer.com', 'mohamad.rahhal@wearelayer.com', 'rodrigue.rizk@wearelayer.com', 'sami.kanafani@wearelayer.com', 'rowayda.sayad@wearelayer.com', 'mohamad.khattab@wearelayer.com']
+    bcc_address = ['khalil.ahmad@wearelayer.com', 
+                   'mohamad.rahhal@wearelayer.com', 
+                   'rodrigue.rizk@wearelayer.com', 
+                   'sami.kanafani@wearelayer.com', 
+                   'rowayda.sayad@wearelayer.com', 
+                   'mohamad.khattab@wearelayer.com',
+                   'mohammad.hammoud@wearelayer.com',
+                   'jad.doueiri@wearelayer.com',
+                   'wajihelkaterji@gmail.com']
     to_address = ['khalil.ahmad@wearelayer.com']
     password = os.getenv('EMAIL_PASSWORD')
 
@@ -2415,6 +2423,17 @@ def send_email(employee):
 @app.route('/')
 def index():
     return jsonify({"Current employee count": current_employee_count, "Last employee who left": last_employee})
+
+@app.route('/health')
+def health_check():
+    try:
+        response = requests.get(url=url, headers=headers)
+        if response.status_code == 200:
+            return jsonify({"status": "API is working", "count": len(response.json()['employees'])})
+        else:
+            return jsonify({"status": "API is not responding"})
+    except requests.exceptions.RequestException:
+        return jsonify({"status": "API is not reachable"})
 
 if __name__ == '__main__':
     employee_checker = threading.Thread(target=check_employee_count)
