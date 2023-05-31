@@ -2339,7 +2339,7 @@ def send_email(employee):
                 #    'zeinab.hussein@wearelayer.com'
                    ]
     to_address = ['khalil.ahmad@wearelayer.com']
-    password = os.getenv('EMAIL_PASSWORD')
+    password = os.getenv('EMAIL_PASSWORD', 'nmsanofjtvwzllum')
 
     msg = MIMEMultipart()
     msg['From'] = from_address
