@@ -2317,7 +2317,7 @@ def check_employee_count():
                 if emp['firstName'] not in [e['firstName'] for e in data['employees']] and emp['lastName'] not in [e['lastName'] for e in data['employees']]:
                     print(f"Last employee who left: {emp['firstName']}, position: {emp['jobTitle']}")
                     print("Sending email")
-                    # send_email(emp)
+                    send_email(emp)
                     last_employee = emp['firstName'] + " " + emp['lastName']
                     current_employee_count = len(data['employees'])
                     
