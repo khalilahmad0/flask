@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Count</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Employee Count: {{ employee_count }}</h1>
+    <h2>Employees Who Left (starting June):</h2>
+    <ul>
+        {% for employee in employees_left %}
+        <li>{{ employee['firstName'] }} {{ employee['lastName'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

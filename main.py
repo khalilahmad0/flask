@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import threading
 import os
 import time
@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 from email import encoders
 
 app = Flask(__name__)
-current_employee_count = 78  # Initial count
+current_employee_count = 76  # Initial count
 last_employee = None  # Record of last employee who left
 employees = [
         {
@@ -505,6 +505,35 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": "Europe/Moscow"
+        },
+        {
+            "firstName": "Gizem",
+            "lastName": "Çetin",
+            "prefName": "Gizem",
+            "jobTitle": "Mobile Developer",
+            "department": "Frontend Engineering",
+            "directReports": [],
+            "division": "Layer Digital Solutions,  Ltd",
+            "email": "gizem.cetin@wearelayer.com",
+            "location": "Worldwide",
+            "imgUrl": "https://images4.bamboohr.com/301964/photos/226-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
+            "reportsTo": None,
+            "workPhone": None,
+            "ext": None,
+            "personalPhone": "+905339733350",
+            "id": 226,
+            "linkedInUrl": "www.linkedin.com/in/gizemececetin",
+            "twitterUrl": None,
+            "facebookUrl": None,
+            "instagramUrl": None,
+            "timeOff": None,
+            "timeOffIcon": None,
+            "skype": None,
+            "pinterest": None,
+            "pronouns": None,
+            "canUploadPhoto": None,
+            "photoUploaded": None,
+            "timezone": None
         },
         {
             "firstName": "Mohammad",
@@ -1085,6 +1114,35 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": None
+        },
+        {
+            "firstName": "Marwa",
+            "lastName": "Karaki",
+            "prefName": None,
+            "jobTitle": "Mobile Developer",
+            "department": "Frontend Engineering",
+            "directReports": [],
+            "division": "Ubanquity SAL Offshore",
+            "email": "marwa.karaki@wearelayer.com",
+            "location": "Beirut, Lebanon",
+            "imgUrl": "https://images4.bamboohr.com/301964/photos/190-2-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
+            "reportsTo": None,
+            "workPhone": None,
+            "ext": None,
+            "personalPhone": "+96170012097",
+            "id": 190,
+            "linkedInUrl": "https://www.linkedin.com/in/marwa-karaki-0a9826187/",
+            "twitterUrl": None,
+            "facebookUrl": None,
+            "instagramUrl": None,
+            "timeOff": None,
+            "timeOffIcon": None,
+            "skype": None,
+            "pinterest": None,
+            "pronouns": None,
+            "canUploadPhoto": None,
+            "photoUploaded": None,
+            "timezone": "Europe/Bucharest"
         },
         {
             "firstName": "Ahmad",
@@ -1841,6 +1899,35 @@ employees = [
             "timezone": None
         },
         {
+            "firstName": "Mohammad",
+            "lastName": "Shokor",
+            "prefName": None,
+            "jobTitle": "Support Engineer",
+            "department": "Support",
+            "directReports": [],
+            "division": "Layer Digital Solutions,  Ltd",
+            "email": "mohammad.shokor@wearelayer.com",
+            "location": "Beirut, Lebanon",
+            "imgUrl": "https://images4.bamboohr.com/301964/photos/257-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
+            "reportsTo": None,
+            "workPhone": None,
+            "ext": None,
+            "personalPhone": "+96171220826",
+            "id": 257,
+            "linkedInUrl": None,
+            "twitterUrl": None,
+            "facebookUrl": None,
+            "instagramUrl": None,
+            "timeOff": None,
+            "timeOffIcon": None,
+            "skype": None,
+            "pinterest": None,
+            "pronouns": None,
+            "canUploadPhoto": None,
+            "photoUploaded": None,
+            "timezone": "Europe/Bucharest"
+        },
+        {
             "firstName": "Eduardo",
             "lastName": "Silveira",
             "prefName": None,
@@ -1955,6 +2042,35 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": "Europe/Brussels"
+        },
+        {
+            "firstName": "Daniel",
+            "lastName": "Tilsed",
+            "prefName": "Dan",
+            "jobTitle": "Business Analyst",
+            "department": "Client Delivery",
+            "directReports": [],
+            "division": "Layer Digital Solutions,  Ltd",
+            "email": "daniel.tilsed@wearelayer.com",
+            "location": "Dublin, Ireland",
+            "imgUrl": "https://images4.bamboohr.com/301964/photos/233-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
+            "reportsTo": None,
+            "workPhone": None,
+            "ext": None,
+            "personalPhone": "+353872074078",
+            "id": 233,
+            "linkedInUrl": "https://www.linkedin.com/in/daniel-tilsed-a1bb1138/",
+            "twitterUrl": None,
+            "facebookUrl": None,
+            "instagramUrl": None,
+            "timeOff": None,
+            "timeOffIcon": None,
+            "skype": None,
+            "pinterest": None,
+            "pronouns": None,
+            "canUploadPhoto": None,
+            "photoUploaded": None,
+            "timezone": "Europe/Lisbon"
         },
         {
             "firstName": "Grzegorz",
@@ -2216,65 +2332,7 @@ employees = [
             "canUploadPhoto": None,
             "photoUploaded": None,
             "timezone": None
-        },
-        {
-            "firstName": "Test",
-            "lastName": "Test",
-            "prefName": None,
-            "jobTitle": "Job",
-            "department": "DPA",
-            "directReports": [],
-            "division": "Ubanquity SAL Offshore",
-            "email": "tarek.ramia@wearelayer.com",
-            "location": "Lebanon",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/202-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+96176902776",
-            "id": 202,
-            "linkedInUrl": "https://www.linkedin.com/in/tarek-abi-ramia-81bb6b202/",
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": None
-        },
-                {
-            "firstName": "Test2",
-            "lastName": "Test2",
-            "prefName": None,
-            "jobTitle": "Job",
-            "department": "DPA",
-            "directReports": [],
-            "division": "Ubanquity SAL Offshore",
-            "email": "tarek.ramia@wearelayer.com",
-            "location": "Lebanon",
-            "imgUrl": "https://images4.bamboohr.com/301964/photos/202-0-4.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9pbWFnZXM0LmJhbWJvb2hyLmNvbS8zMDE5NjQvKiIsIkNvbmRpdGlvbiI6eyJEYXRlR3JlYXRlclRoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4NTUxMDgwNn0sIkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg4MTAyODE2fX19XX0_&Signature=Odi07g04PEYK6OHK-arxRsWQVuiGjMft590fngHMCkrmrQ0mTsqS3hD~ksa5StI0IK2s3U0XtOCPLbP5qpmMNsDfKsNdDXKmvrKVo0GaxP5Tl9Y9Cqmjj55Bbli0Yl6BOjD1EcaAwQy2cc3-5ylPMQZdr94LVdwGEcmul1ZdQa6IaHr53teQRUe0KhGwfMUmWuHmdZ-MqCKjMZwPPB3XJaCtzAa27X799UzDkGCu5yFK4rSlJFuLDuRYpEor7YC-0NFWa7cs10L7rgjw3t5DAAw8J5~cP7nP1DPFRY5FeTZHCw8QAdV9fvSghTB-IOJDrJDA9FSm3gcjfM-KeWpxag__&Key-Pair-Id=APKAIZ7QQNDH4DJY7K4Q",
-            "reportsTo": None,
-            "workPhone": None,
-            "ext": None,
-            "personalPhone": "+96176902776",
-            "id": 202,
-            "linkedInUrl": "https://www.linkedin.com/in/tarek-abi-ramia-81bb6b202/",
-            "twitterUrl": None,
-            "facebookUrl": None,
-            "instagramUrl": None,
-            "timeOff": None,
-            "timeOffIcon": None,
-            "skype": None,
-            "pinterest": None,
-            "pronouns": None,
-            "canUploadPhoto": None,
-            "photoUploaded": None,
-            "timezone": None
-        },
+        }
     ]
 
 url = f'https://wearelayer.bamboohr.com/employee_directory/ajax/get_directory_info'
@@ -2322,21 +2380,22 @@ def check_employee_count():
                     current_employee_count = len(data['employees'])
                     
             employees = data['employees']
-        time.sleep(0.1*60)  # wait for 5 minutes
+        time.sleep(5*60)  # wait for 5 minutes
         
 
 def send_email(employee):
     from_address = 'khalil.ibr.ahmad@gmail.com'
     bcc_address = ['khalil.ahmad@wearelayer.com',
-                #    'mohamad.rahhal@wearelayer.com', 
-                #    'rodrigue.rizk@wearelayer.com', 
-                #    'sami.kanafani@wearelayer.com', 
-                #    'rowayda.sayad@wearelayer.com', 
-                #    'mohamad.khattab@wearelayer.com',
-                #    'mohammad.hammoud@wearelayer.com',
-                #    'jad.doueiri@wearelayer.com',
-                #    'wajihelkaterji@gmail.com',
-                #    'zeinab.hussein@wearelayer.com'
+                   'mohamad.rahhal@wearelayer.com', 
+                   'rodrigue.rizk@wearelayer.com', 
+                   'sami.kanafani@wearelayer.com', 
+                   'rowayda.sayad@wearelayer.com', 
+                   'mohamad.khattab@wearelayer.com',
+                   'mohammad.hammoud@wearelayer.com',
+                   'jad.doueiri@wearelayer.com',
+                   'wajihelkaterji@gmail.com',
+                   'zeinab.hussein@wearelayer.com',
+                   'ahmad.kassabieh@wearelayer.com'
                    ]
     to_address = ['khalil.ahmad@wearelayer.com']
     password = os.getenv('EMAIL_PASSWORD', 'nmsanofjtvwzllum')
@@ -2368,7 +2427,11 @@ def send_email(employee):
 
 @app.route('/')
 def index():
-    return jsonify({"Current employee count": current_employee_count, "Last employee who left": last_employee})
+    response = requests.get(url=url, headers=headers)
+    data = response.json()
+    employee_count = len(data['employees'])
+    employees_left = [emp for emp in employees if emp['id'] not in [e['id'] for e in data['employees']]]
+    return render_template('index.html', employee_count=employee_count, employees_left=employees_left)
 
 @app.route('/health')
 def health_check():
