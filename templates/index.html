@@ -11,7 +11,7 @@
     <h2>Employees Who Left (starting June):</h2>
     <ul>
         {% for employee in employees_left %}
-        <li>{{ employee['firstName'] }} {{ employee['lastName'] }}</li>
+        <li>{{ employee['firstName'] }} {{ employee['lastName'] }} ({{employee["jobTitle"]}})</li>
         {% endfor %}
     </ul>
 </body>
