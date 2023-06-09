@@ -11,7 +11,11 @@
     <h2>Employees Who Left (starting June):</h2>
     <ul>
         {% for employee in employees_left %}
+        {% if employee['firstName'] == 'Khalil' %}
+        <li><strong>{{ employee['firstName'] }} {{ employee['lastName'] }} ({{employee["jobTitle"]}}) 🪦</strong></li>
+        {% else %}
         <li>{{ employee['firstName'] }} {{ employee['lastName'] }} ({{employee["jobTitle"]}})</li>
+        {% endif %}
         {% endfor %}
     </ul>
 </body>
